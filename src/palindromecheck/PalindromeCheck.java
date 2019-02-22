@@ -1,13 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package palindromecheck;
 
 /**
+ * PalindromeCheck was specifycali maded for a job test
+ * 
  *
- * @author fulvi
+ * @author Fulvius
  */
 public class PalindromeCheck {
 
@@ -17,6 +14,20 @@ public class PalindromeCheck {
     private boolean isPalindrome = false;
 
     /**
+     * word is a sentence to check this is required.
+     * caseSensitive is true to turn on case sensitive check (default:
+     * false).
+     * considerWhiteSpaces is false to turn off case sensitive check (default:
+     * true).
+     * Usage:
+     * Comnadline: java PalindromeCheck word [ caseSensitive [
+     * considerWhiteSpaces ]].
+     * Object:
+     * boolean check = new PalindromeCheck(word)
+     * [.isCaseSensitive(caseSensitive)]
+     * [.isConsiderWhiteSpaces(considerWhiteSpaces)]
+     * .check(); 
+     *
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -53,20 +64,47 @@ public class PalindromeCheck {
 
     }
 
+    /**
+     * Crontructor for class PalindromeCheck
+     * 
+     *
+     * @param word string the word to be checked
+     */
     public PalindromeCheck(String word) {
         this.word = word;
     }
 
+    /**
+     * Sets caseSensitive with a parsed boolean value of providedd parameter
+     *
+     * @param parm string must be true or false
+     * @return PalindromeCheck
+     */
     public PalindromeCheck isCaseSensitive(String parm) {
         this.caseSensitive = Boolean.parseBoolean(parm);
         return this;
     }
 
+    /**
+     * Sets considerWhiteSpaces with a parsed boolean value of provided
+     * parameter
+     * 
+     *
+     * @param parm string must be true or false
+     * @return PalindromeCheck
+     */
     public PalindromeCheck isConsiderWhiteSpaces(String parm) {
         this.considerWhiteSpaces = Boolean.parseBoolean(parm);
         return this;
     }
 
+    /**
+     * Sets and Returns isPalindrome to true only if the word provided in
+     * constructor is a palindrome
+     * 
+     *
+     * @return boolean
+     */
     public boolean check() {
         if (!this.considerWhiteSpaces) {
             this.word = this.word.replaceAll(" ", "");
@@ -80,5 +118,4 @@ public class PalindromeCheck {
         }
         return this.isPalindrome;
     }
-
 }
