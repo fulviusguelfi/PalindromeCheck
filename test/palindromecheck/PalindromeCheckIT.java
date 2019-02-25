@@ -84,4 +84,16 @@ public class PalindromeCheckIT {
         assertEquals(expResult, result);
     }
 
+    /**
+     * Test of main method, of class PalindromeCheck.
+     */
+    @Test
+    public void testMain() {
+        System.out.println("main");
+        String[] args = null;
+        PalindromeCheck.main(args);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
 }
