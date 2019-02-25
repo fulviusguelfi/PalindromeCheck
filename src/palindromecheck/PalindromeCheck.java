@@ -1,9 +1,8 @@
 package palindromecheck;
 
 /**
- * PalindromeCheck was specifycali maded for a job test
+ * PalindromeCheck was specifically maded for a job test
  * 
- *
  * @author Fulvius
  */
 public class PalindromeCheck {
@@ -22,11 +21,12 @@ public class PalindromeCheck {
      * Usage:
      * Comnadline: java PalindromeCheck word [ caseSensitive [
      * considerWhiteSpaces ]].
+     * (output goes to console)
      * Object:
      * boolean check = new PalindromeCheck(word)
-     * [.isCaseSensitive(caseSensitive)]
-     * [.isConsiderWhiteSpaces(considerWhiteSpaces)]
-     * .check(); 
+     *      [.isCaseSensitive(caseSensitive)]
+     *      [.isConsiderWhiteSpaces(considerWhiteSpaces)]
+     *      .check(); 
      *
      * @param args the command line arguments
      */
